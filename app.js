@@ -105,14 +105,12 @@ const App = () => {
       setAnswer('');
       setOutcome('You pass the word!')
     } else if(maxPasses === 0){
-      setStrike(3)
       setAnswer('');
-      setOutcome('Game Over! Play Again!')
+      setOutcome('No More Pass!')
     }
     else{
-      setStrike(3)
       setAnswer('');
-      setOutcome('Game Over! Play Again!')
+      setOutcome( 'Game Over! Play Again!')
     }
 
   }
@@ -166,7 +164,9 @@ const App = () => {
       return '#ADD8E6'
     } else if (outcome==='Game Over! Play Again!'){
       return '#FF7F7F'
-    } else {
+    } else if (outcome==='No More Pass!'){
+      return '#FF7F7F'
+    }else {
       return 'white'; 
     }
   }
@@ -180,7 +180,9 @@ const App = () => {
       return '1.5rem'
     } else if (outcome==='Game Over! Play Again!'){
       return '1.5rem'
-    } else {
+    } else if (outcome==='No More Pass!'){
+      return '1.5rem'
+    }else {
       return '0rem'; 
   }}
 
